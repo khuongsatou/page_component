@@ -1,0 +1,11 @@
+{
+  "name": "npm_mtips5s",
+  "version": "1.0.0",
+  "description": "![alt text](https://tools.mtips5s.com/templates/assets/images/2024-07-20/Screen_Shot_2024-07-20_at_21.26.41.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
