@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in to Jenkins</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <img src="jenkins-logo.png" alt="Jenkins Logo" class="jenkins-logo" style="object-fit: cover;border-radius: 20px;">
+        </div>
+        <div class="right-panel">
+            <h1>Sign in to Jenkins</h1>
+            <form>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="keep-signed" name="keep-signed">
+                    <label for="keep-signed">Keep me signed in</label>
+                </div>
+                <button type="submit">Sign in</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

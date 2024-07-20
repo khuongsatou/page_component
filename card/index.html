@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Card Đẹp</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .card-container {
+            perspective: 1000px;
+        }
+        .card {
+            width: 300px;
+            height: 400px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s;
+            transform-style: preserve-3d;
+        }
+        .card:hover {
+            transform: rotateY(180deg);
+        }
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+        }
+        .card-front {
+            background-color: #007bff;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .card-back {
+            background-color: #ff5722;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            transform: rotateY(180deg);
+        }
+        h1 {
+            margin: 0;
+        }
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card">
+            <div class="card-front">
+                <h1>Card Mặt Trước</h1>
+                <p>Đây là mặt trước của card. Hãy di chuột qua card để xem mặt sau.</p>
+            </div>
+            <div class="card-back">
+                <h1>Card Mặt Sau</h1>
+                <p>Đây là mặt sau của card. Hãy di chuột ra ngoài để xem mặt trước.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AOL-like Interface</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: white;
+            border-bottom: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+        }
+        .navbar .search-bar {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .navbar .search-bar input {
+            padding: 10px;
+            border-radius: 50px;
+            border: 1px solid #ccc;
+            outline: none;
+            width: 200px;
+            transition: width 0.3s ease;
+        }
+        .navbar .search-bar input:focus {
+            width: 300px;
+        }
+        .navbar .search-bar .search-icon {
+            position: absolute;
+            right: 10px;
+            color: #007bff;
+            cursor: pointer;
+        }
+        .navbar .options {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .options .help {
+            margin-right: 20px;
+            color: black;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .navbar .options .help:hover {
+            color: #007bff;
+        }
+        .navbar .options .mail,
+        .navbar .options .sign-in {
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .navbar .options .mail:hover,
+        .navbar .options .sign-in:hover {
+            transform: scale(1.1);
+        }
+        .navbar .options .sign-in {
+            padding: 8px 16px;
+            border: 1px solid #007bff;
+            border-radius: 50px;
+            color: #007bff;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .navbar .options .sign-in:hover {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">Aol.</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <i class="search-icon">🔍</i>
+        </div>
+        <div class="options">
+            <div class="help">24/7 Help</div>
+            <div class="mail">📧 Mail</div>
+            <div class="sign-in">Sign in</div>
+        </div>
+    </div>
+</body>
+</html>

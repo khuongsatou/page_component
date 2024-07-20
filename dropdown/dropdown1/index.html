@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Selector</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .dropdown-container {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .dropdown-btn:hover {
+            background-color: #3e8e41;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+            animation: fadeIn 0.3s ease;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown-container:hover .dropdown-content {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+
+<div class="dropdown-container">
+    <button class="dropdown-btn">Select Template <i class="fas fa-caret-down"></i></button>
+    <div class="dropdown-content" id="dropdown-content">
+        <!-- Options will be populated by JavaScript -->
+    </div>
+</div>
+
+<script>
+    // Sample template types
+    const templateTypes = ["Template 1", "Template 2", "Template 3"];
+
+    // Function to populate the dropdown
+    function populateDropdown() {
+        const dropdownContent = document.getElementById('dropdown-content');
+        templateTypes.forEach(type => {
+            const a = document.createElement('a');
+            a.href = "#";
+            a.textContent = type;
+            a.onclick = () => selectTemplate(type);
+            dropdownContent.appendChild(a);
+        });
+    }
+
+    // Function to handle template selection
+    function selectTemplate(templateType) {
+        alert(`Selected template: ${templateType}`);
+    }
+
+    // Populate the dropdown on page load
+    document.addEventListener('DOMContentLoaded', populateDropdown);
+</script>
+
+</body>
+</html>

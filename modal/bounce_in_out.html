@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SweetAlert Style Modal - Bounce In/Out</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transform: scale(0);
+            transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+
+        .modal.show .modal-content {
+            transform: scale(1);
+        }
+
+        .modal.hide .modal-content {
+            transform: scale(0);
+        }
+
+        .modal-header {
+            margin-bottom: 20px;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .modal-body p {
+            font-size: 18px;
+            color: #666;
+            margin: 10px 0;
+        }
+
+        .modal-footer {
+            margin-top: 20px;
+        }
+
+        .modal-footer button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.2s ease;
+        }
+
+        .modal-footer button:hover {
+            background-color: #0056b3;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: #aaa;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+
+<button id="myBtn">Open Modal</button>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-header">
+            <h2>Modal Title</h2>
+        </div>
+        <div class="modal-body">
+            <p>This is a bounce in/out modal.</p>
+        </div>
+        <div class="modal-footer">
+            <button id="closeBtn">OK</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var closeBtn = document.querySelector(".close");
+    var okBtn = document.getElementById("closeBtn");
+
+    btn.onclick = function() {
+        modal.style.display = "flex";
+        setTimeout(() => modal.classList.add("show"), 10);
+    }
+
+    closeBtn.onclick = function() {
+        modal.classList.remove("show");
+        modal.classList.add("hide");
+        setTimeout(() => {
+            modal.style.display = "none";
+            modal.classList.remove("hide");
+        }, 500);
+    }
+
+    okBtn.onclick = function() {
+        modal.classList.remove("show");
+        modal.classList.add("hide");
+        setTimeout(() => {
+            modal.style.display = "none";
+            modal.classList.remove("hide");
+        }, 500);
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.classList.remove("show");
+            modal.classList.add("hide");
+            setTimeout(() => {
+                modal.style.display = "none";
+                modal.classList.remove("hide");
+            }, 500);
+        }
+    }
+</script>
+
+</body>
+</html>

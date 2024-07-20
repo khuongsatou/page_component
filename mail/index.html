@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Câu hỏi trắc nghiệm</title>
+    <style>
+        body {
+            margin:0;
+            padding:0;
+            font-family: 'Roboto', sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        .question {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .answers {
+            list-style-type: none;
+            padding: 0;
+        }
+        .answers li {
+            margin-bottom: 10px;
+        }
+        .answers input[type="radio"] {
+            margin-right: 10px;
+        }
+        .image-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="question">
+        Đây là câu hỏi của bạn?
+    </div>
+    <ul class="answers">
+        <li>
+            <label>
+                <input type="radio" name="answer" value="1"> Lựa chọn 1
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="radio" name="answer" value="2"> Lựa chọn 2
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="radio" name="answer" value="3"> Lựa chọn 3
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="radio" name="answer" value="4"> Lựa chọn 4
+            </label>
+        </li>
+    </ul>
+    <div class="image-container">
+        <img src="./image.png" alt="Image related to question">
+    </div>
+</div>
+
+</body>
+</html>

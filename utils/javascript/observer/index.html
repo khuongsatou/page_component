@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observer Pattern Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .observer {
+            margin-bottom: 10px;
+        }
+        .observer input {
+            margin-right: 5px;
+        }
+        #notifications {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .fade-in {
+            animation: fadeIn 1s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .slide-in {
+            animation: slideIn 1s;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Observer Pattern Example</h1>
+    <div id="observers">
+        <div class="observer">
+            <input type="checkbox" id="observer1" checked>
+            <label for="observer1">Observer 1</label>
+        </div>
+        <div class="observer">
+            <input type="checkbox" id="observer2" checked>
+            <label for="observer2">Observer 2</label>
+        </div>
+    </div>
+    <button id="notifyBtn">Notify Observers</button>
+    <div id="notifications">
+        <h2>Notifications</h2>
+        <ul id="notificationList"></ul>
+    </div>
+
+    <script src="observer.js"></script>
+</body>
+</html>
