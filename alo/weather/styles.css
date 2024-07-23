@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.location {
+    margin-top: 10px;
+}
+
+.location h2 {
+    font-size: 1.5em;
+    margin: 0;
+    display: inline-block;
+}
+
+.change-location {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.current-location {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.current-location i {
+    margin-right: 5px;
+}
+
+.edit-location {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+main {
+    margin-top: 20px;
+}
+
+.current-weather {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.weather-icon i {
+    font-size: 4em;
+    color: #ffcc00;
+}
+
+.weather-details {
+    text-align: center;
+}
+
+.temperature {
+    font-size: 4em;
+}
+
+.weather-info {
+    margin-top: 10px;
+}
+
+.weather-info span {
+    display: block;
+}
+
+.weather-extras {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.extra {
+    text-align: center;
+}
+
+.forecast {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.forecast-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tab.active {
+    background-color: #ffcc00;
+    color: white;
+}
+
+.forecast-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.forecast-hour {
+    text-align: center;
+}
+
+.forecast-hour i {
+    font-size: 2em;
+    color: #ffcc00;
+}
+
+.weather-video {
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.unit-toggle {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+    
