@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: url('https://via.placeholder.com/1920x1080') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+.login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    animation: slideDown 0.5s ease-in-out;
+}
+
+.login-header {
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    /* left: 15px; */
+    transform: translateY(-50%);
+    color: #999;
+    z-index: 1;
+}
+
+.input-group i.left{
+    left: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+
+
+
+.input-group input:focus {
+    border-color: #ffa500;
+    outline: none;
+}
+
+/* .input-group i, input:focus{
+    color: #ffa500 !important;
+} */
+
+.input-group input:focus + i {
+    color: #ffa500 !important;
+}
+
+
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 15px !important;
+    transform: translateY(-50%);
+    cursor: pointer;
+    /* background-color: red; */
+    width: 50px;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.remember-forgot label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.remember-forgot input {
+    margin-right: 5px;
+}
+
+.remember-forgot a {
+    color: #ffa500;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn-login {
+    background: #ffa500;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.btn-login:hover {
+    background: #ff8c00;
+}
+
+.create-account {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.create-account a {
+    color: #ffa500;
+    text-decoration: none;
+}
+
+.create-account a:hover {
+    text-decoration: underline;
+}
+
+/* Animation */
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Animation cho input khi người dùng focus */
+.input-group input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+    background-color: #f9f9f9;
+}
+
+.input-group input:focus {
+    border-color: #ffa500;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(255, 165, 0, 0.7);
+    transform: scale(1.02); /* Hiệu ứng phóng to nhẹ */
+}
+
+/* Animation cho nút đăng nhập khi nhấn */
+.btn-login {
+    background: #ffa500;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s, transform 0.2s ease-in-out;
+}
+
+.btn-login:active {
+    background: #ff8c00;
+    transform: scale(0.98); /* Hiệu ứng thu nhỏ nhẹ khi nhấn */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Tạo hiệu ứng chuyển đổi khi hover */
+.btn-login:hover {
+    background: #ff8c00;
+    box-shadow: 0 5px 15px rgba(255, 140, 0, 0.3);
+    transform: translateY(-2px); /* Nhấn mạnh hiệu ứng nổi */
+}
+
+/* Animation chung */
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Thêm hiệu ứng khi người dùng nhấn nút đăng nhập */
+@keyframes buttonPress {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.98);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

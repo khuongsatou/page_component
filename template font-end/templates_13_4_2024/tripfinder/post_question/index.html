@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visa Application UI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            width: 600px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        .question {
+            font-size: 18px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .question i {
+            color: #777;
+            transition: transform 0.3s;
+        }
+
+        .question.active i {
+            transform: rotate(180deg);
+        }
+
+        .answer {
+            font-size: 16px;
+            color: #656565;
+            margin-top: 10px;
+            max-height: 100px;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+            opacity: 1;
+        }
+
+        .answer.hidden {
+            max-height: 0;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="question">
+            <span>Tôi có cần phải công chứng hồ sơ xin visa không?</span>
+            <i class="fas fa-chevron-up"></i>
+        </div>
+        <div class="answer">
+            Không, visa Ấn Độ sẽ xin online nhé
+        </div>
+    </div>
+
+    <script>
+        // Get elements
+        const question = document.querySelector('.question');
+        const answer = document.querySelector('.answer');
+
+        // Add event listener to toggle the answer visibility
+        question.addEventListener('click', function() {
+            // Toggle the 'hidden' class on the answer
+            answer.classList.toggle('hidden');
+
+            // Toggle the rotation of the icon
+            question.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>

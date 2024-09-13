@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0B2C3E;
+    padding: 10px 20px;
+    height: 80px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFB400;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 15px;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.contact a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border: 2px solid white;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact a:hover {
+    background-color: white;
+    color: #0B2C3E;
+}

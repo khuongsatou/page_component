@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Box</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+        .top-right {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .top-right .fa-bell {
+            margin-right: 10px;
+            position: relative;
+            /* top: 5px; */
+        }
+        .input-container {
+            margin: 20px 0;
+            display: flex;
+            /* align-items: center; */
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            height: 100px;
+            padding: 10px;
+        }
+        .input-container textarea {
+            width: 100%;
+            border: none;
+            resize: none;
+            outline: none;
+            font-size: 16px;
+            /* padding: 10px; */
+        }
+        .input-container .icons {
+            display: flex;
+            align-items: flex-end;
+            /* background-color: red; */
+            /* padding:10px; */
+            
+        }
+        .input-container .icons .fa {
+            margin-right: 10px;
+            cursor: pointer;
+            color: #ccc;
+        }
+        .submit-btn {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .submit-btn button {
+            background-color: #1877F2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-btn button:hover {
+            background-color: #145db2;
+        }
+        .top-right, .submit-btn button {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-right">
+            <i class="fa fa-bell"></i>
+            <span>Log in</span>
+        </div>
+        <div class="input-container">
+            <textarea placeholder="Be the first to comment..."></textarea>
+            <div class="icons">
+                <i class="fa fa-font"></i>
+                <i class="fa fa-camera"></i>
+                <i class="fa fa-gift"></i>
+            </div>
+        </div>
+        <div class="submit-btn">
+            <button>Sign up to post</button>
+        </div>
+    </div>
+</body>
+</html>

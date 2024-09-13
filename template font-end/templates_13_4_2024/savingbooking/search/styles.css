@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('your-background-image.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.search-input, .search-dates, .search-guests, .search-btn {
+  margin-right: 15px;
+}
+
+.search-input label, .search-dates .date label, .search-guests label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.search-input input, .search-dates .date input, .search-guests input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.search-input input::placeholder {
+  color: #bbb;
+}
+
+.search-btn button {
+  background-color: #ff4d4d;
+  border: none;
+  padding: 15px;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-btn button:hover {
+  background-color: #e33e3e;
+}
+
+.search-btn i {
+  color: #fff;
+}
+
+.search-input input:focus, .search-dates .date input:focus, .search-guests input:focus {
+  box-shadow: 0 0 5px rgba(255, 77, 77, 0.5);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

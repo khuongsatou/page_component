@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visa Application UI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            width: 600px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-size: 18px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .question i {
+            color: #777;
+            transition: transform 0.3s;
+        }
+
+        .question.active i {
+            transform: rotate(180deg);
+        }
+
+        .answer {
+            font-size: 16px;
+            color: #656565;
+            margin-top: 10px;
+            max-height: 100px;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+            opacity: 1;
+        }
+
+        .answer.hidden {
+            max-height: 0;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="faq-item">
+            <div class="question">
+                <span>Tôi có cần phải công chứng hồ sơ xin visa không?</span>
+                <i class="fas fa-chevron-up"></i>
+            </div>
+            <div class="answer hidden">
+                Không, visa Ấn Độ sẽ xin online nhé
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">
+                <span>Tôi có cần nộp giấy tờ gì thêm không?</span>
+                <i class="fas fa-chevron-up"></i>
+            </div>
+            <div class="answer hidden">
+                Bạn chỉ cần nộp hộ chiếu và ảnh thẻ.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">
+                <span>Thời gian xử lý visa là bao lâu?</span>
+                <i class="fas fa-chevron-up"></i>
+            </div>
+            <div class="answer hidden">
+                Thời gian xử lý khoảng 3-5 ngày làm việc.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get all question elements
+        const questions = document.querySelectorAll('.question');
+
+        // Loop through each question and add click event listener
+        questions.forEach((question) => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+
+                // Toggle the 'hidden' class on the associated answer
+                answer.classList.toggle('hidden');
+
+                // Toggle the rotation of the icon
+                this.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+</html>

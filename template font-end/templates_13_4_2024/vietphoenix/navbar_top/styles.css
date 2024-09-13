@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #2d0200; /* Màu nền tương tự */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.logo img {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05); /* Hiệu ứng khi hover logo */
+}
+
+.login-cart {
+    display: flex;
+    align-items: center;
+}
+
+.login-btn {
+    background-color: #b43c22; /* Màu nút đăng nhập */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #a1311c; /* Đổi màu khi hover */
+    transform: scale(1.05); /* Phóng to nút khi hover */
+}
+
+.cart-icon {
+    font-size: 24px;
+    color: white;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.cart-icon:hover {
+    transform: rotate(15deg); /* Hiệu ứng xoay nhẹ khi hover */
+}
+
+.cart-icon::after {
+    content: '0'; /* Số lượng giỏ hàng (thay đổi theo dữ liệu) */
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #b43c22;
+    color: white;
+    font-size: 12px;
+    padding: 4px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+}

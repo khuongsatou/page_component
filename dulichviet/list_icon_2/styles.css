@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+.icon-container {
+    display: flex;
+    gap: 50px;
+}
+
+.icon-item {
+    text-align: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-item i {
+    font-size: 50px;
+    color: #FF5722;
+    transition: color 0.3s ease;
+}
+
+.icon-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.icon-item:hover {
+    transform: translateY(-10px);
+}
+
+.icon-item:hover i {
+    color: #3F51B5;
+}
+
+.icon-item:hover p {
+    color: #3F51B5;
+}

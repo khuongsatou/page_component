@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Interface</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="search-container">
+        <div class="input-container">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Nhập nơi bạn đến">
+            <span>|</span>
+            <input type="text" placeholder="Ngày nhận phòng - Trả phòng" class="date-input">
+            <span>|</span>
+            <input type="text" placeholder="Khách - Phòng" class="guest-input">
+            <span>|</span>
+            <label class="checkbox-container">
+                <input type="checkbox">
+                Tìm kiếm nâng cao
+            </label>
+        </div>
+        <button class="search-button">Tìm kiếm</button>
+    </div>
+
+    <div class="keywords">
+        <span>Top từ khóa:</span>
+        <a href="#">Đà Nẵng</a>, 
+        <a href="#">Phú Quý</a>, 
+        <a href="#">Nha Trang</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

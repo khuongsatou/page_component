@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Interface</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-text">
+                <h2>Tìm & đặt phòng khách sạn giá rẻ chỉ với 3 bước đơn giản!</h2>
+                <p>Khám phá ngay những ưu đãi tốt nhất dành cho bạn tại Traveloka!</p>
+            </div>
+            <div class="header-promo">
+                <img src="https://via.placeholder.com/300x150" alt="Promo">
+                <img src="https://via.placeholder.com/300x150" alt="Promo">
+            </div>
+        </div>
+
+        <div class="booking-form">
+            <h3><i class="fas fa-hotel"></i> Khách sạn xem gần đây</h3>
+            <div class="form-group">
+                <label for="location"><i class="fas fa-map-marker-alt"></i> Thành phố, địa điểm hoặc tên khách sạn:</label>
+                <input type="text" id="location" value="Tỉnh Long An">
+            </div>
+            <div class="form-group">
+                <label for="check-in"><i class="fas fa-calendar-alt"></i> Nhận phòng:</label>
+                <input type="date" id="check-in" value="2024-08-23">
+            </div>
+            <div class="form-group">
+                <label for="nights"><i class="fas fa-moon"></i> Số đêm:</label>
+                <input type="number" id="nights" value="1">
+            </div>
+            <div class="form-group">
+                <label for="check-out"><i class="fas fa-calendar-alt"></i> Trả phòng:</label>
+                <input type="date" id="check-out" value="2024-08-24">
+            </div>
+            <div class="form-group">
+                <label for="guests"><i class="fas fa-users"></i> Khách và Phòng:</label>
+                <input type="text" id="guests" value="2 người lớn, 0 Trẻ em, 1 phòng">
+            </div>
+            <div class="form-group">
+                <button class="search-btn"><i class="fas fa-search"></i> Tìm khách sạn</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

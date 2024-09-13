@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease-in-out;
+  width: 900px;
+}
+
+.search-input, .search-dates, .search-guests, .search-btn {
+  margin-right: 10px;
+}
+
+.search-input label, .search-dates .date label, .search-guests label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+
+.search-input input, .search-dates .date input, .search-guests input {
+  border: none;
+  background-color: #f7f7f7;
+  padding: 12px;
+  border-radius: 5px;
+  width: 250px;
+  font-size: 14px;
+  margin-top: 5px;
+  color: #333;
+  outline: none;
+}
+
+.search-input input::placeholder {
+  color: #bbb;
+}
+
+.search-dates {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-dates .date {
+  margin-right: 20px;
+}
+
+.search-dates .date input {
+  width: 120px;
+  text-align: center;
+}
+
+.search-guests input {
+  width: 300px;
+  text-align: left;
+}
+
+.search-btn {
+  background-color: #ff4d4d;
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: #e33e3e;
+}
+
+.search-btn i {
+  font-size: 20px;
+  color:#fff;
+}
+
+
+.search-input input:focus, .search-dates .date input:focus, .search-guests input:focus {
+  box-shadow: 0 0 5px rgba(255, 77, 77, 0.5);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .search-container {
+    flex-direction: column;
+    padding: 20px;
+    width: auto;
+  }
+
+  .search-input, .search-dates, .search-guests, .search-btn {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .search-btn {
+    /* width: 100%; */
+    justify-content: center;
+    align-self: center;
+  }
+
+  .search-container {
+    display: flex;
+    align-items: flex-start;
+    background-color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-in-out;
+    /* width: 900px; */
+  }
+}

@@ -1,0 +1,123 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #f4f4f9;
+}
+
+.form-container {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    text-align: left;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h2 {
+    color: #b13224;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-group i {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    color: #b13224;
+}
+
+input, select, textarea {
+    width: 88%;
+    padding: 12px 15px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.3s;
+    font-size: 14px;
+    background-color: #f9f9f9;
+}
+
+select {
+    width: 100%;
+    padding: 12px 15px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.3s;
+    font-size: 14px;
+    background-color: #f9f9f9;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #b13224;
+}
+
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140"><polygon points="70,105 15,35 125,35" fill="%23b13224"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #b13224;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #99251e;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+::placeholder {
+    color: #bbb;
+}
+
+.form-group input[type="text"]:placeholder-shown,
+.form-group input[type="email"]:placeholder-shown,
+.form-group input[type="tel"]:placeholder-shown,
+.form-group textarea:placeholder-shown {
+    padding-left: 40px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea,
+.form-group select {
+    background: rgba(255, 255, 255, 0.9);
+}

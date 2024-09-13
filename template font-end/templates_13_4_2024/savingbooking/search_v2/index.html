@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+  <script>
+    $( function() {
+      $( "#datepicker_checkin" ).datepicker();
+    } );
+    $( function() {
+      $( "#datepicker_checkout" ).datepicker();
+    } );
+    </script>
+</head>
+<body>
+
+  <div class="search-container">
+    <div class="search-input">
+      <label for="destination">Bạn muốn đi đâu ?</label>
+      <input type="text" id="destination" placeholder="Thành phố, khách sạn, điểm đến">
+    </div>
+    <div class="search-dates">
+      <div class="date">
+        <label for="checkin">Ngày đến</label>
+        <!-- <input type="text" id="checkin" value="06/09/2024" readonly> -->
+        <input type="text" id="datepicker_checkin" value="06/09/2024" readonly>
+      </div>
+      <div class="date">
+        <label for="checkout">Ngày về</label>
+        <!-- <input type="text" id="checkout" value="07/09/2024" readonly> -->
+        <input type="text" id="datepicker_checkout" value="07/09/2024" readonly>
+      </div>
+    </div>
+    <div class="search-guests">
+      <label for="guests">Số phòng, số khách</label>
+      <input type="text" id="guests" value="1 Phòng, 2 Người lớn, 0 Trẻ em" readonly>
+    </div>
+    <div class="search-btn">
+      <i class="fas fa-search"></i>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

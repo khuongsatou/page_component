@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Selector</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="room-selector">
+        <div class="room-header">
+            <span>Chọn phòng</span>
+            <i class="fa fa-times close-icon"></i>
+        </div>
+        <div class="room-control">
+            <span>Số phòng</span>
+            <div class="control-box">
+                <button class="btn minus"><i class="fa fa-minus"></i></button>
+                <input type="text" id="room-count" value="3" readonly>
+                <button class="btn plus"><i class="fa fa-plus"></i></button>
+            </div>
+        </div>
+        <div class="room-control">
+            <span>Người lớn</span>
+            <div class="control-box">
+                <button class="btn minus"><i class="fa fa-minus"></i></button>
+                <input type="text" id="adult-count" value="2" readonly>
+                <button class="btn plus"><i class="fa fa-plus"></i></button>
+            </div>
+        </div>
+        <div class="room-control">
+            <span>Trẻ em</span>
+            <div class="control-box">
+                <button class="btn minus"><i class="fa fa-minus"></i></button>
+                <input type="text" id="children-count" value="0" readonly>
+                <button class="btn plus"><i class="fa fa-plus"></i></button>
+            </div>
+        </div>
+        <div class="room-control">
+            <span>Em bé</span>
+            <div class="control-box">
+                <button class="btn minus"><i class="fa fa-minus"></i></button>
+                <input type="text" id="infant-count" value="0" readonly>
+                <button class="btn plus"><i class="fa fa-plus"></i></button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
